@@ -1,0 +1,9 @@
+from python:3.8-slim
+run mkdir /app
+workdir /app
+env BOT_API_KEY= [INSERT BOT API KEY]
+#copy all from my dir to app dir
+copy . .
+run pip install -r requirements.txt
+#final command
+cmd ["python3","bot.py"]
